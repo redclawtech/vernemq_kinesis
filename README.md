@@ -37,23 +37,23 @@ plugins.vernemq_kinesis.path = <PathToYourPlugin>/vernemq_kinesis/_build/default
 
 - The following settings are available for this plugin:
 
-    - `vernemq_kinesis.aws_key`: The AWS Key.
+    - **vernemq_kinesis.aws_key**: The AWS Key.
         See http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html.
 
-    - `vernemq_kinesis.aws_secret_key`: The AWS secret key for connecting to Kinesis.
+    - **vernemq_kinesis.aws_secret_key**: The AWS secret key for connecting to Kinesis.
         See http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html.
 
-    - `vernemq_kinesis.region`: The AWS region.
+    - **vernemq_kinesis.region**: The AWS region.
 
-    - `vernemq_kinesis.stream`: The Kinesis stream name to write to.
+    - **vernemq_kinesis.stream**: The Kinesis stream name to write to.
 
-    - `vernemq_kinesis.allowed_topics`: The topics that are allowed to publish to Kinesis.
+    - **vernemq_kinesis.allowed_topics**: The topics that are allowed to publish to Kinesis.
         Can use "#" for all the topics or wilcards like <<"devices/#">>. Defaults to "#".
 
-    - `vernemq_kinesis.batch_size`: The number of records to batch before flushing the queue.
+    - **vernemq_kinesis.batch_size**: The number of records to batch before flushing the queue.
         Defaults to 500.
 
-    - `vernemq_kinesis.batch_time`: The maximum of milliseconds to wait before flushing the queue.
+    - **vernemq_kinesis.batch_time**: The maximum of milliseconds to wait before flushing the queue.
         Defaults to 20000(20 seconds).
 
 They can be added to the `vernemq.conf` file.
