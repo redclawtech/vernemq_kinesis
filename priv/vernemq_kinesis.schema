@@ -1,0 +1,48 @@
+%% -*- mode: erlang -*-
+%% ex: ft=erlang
+
+%% @doc Set the AWS Key.
+%% See http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html.
+{mapping, "vernemq_kinesis.aws_key", "vernemq_kinesis.aws_key", [
+{default, ""},
+{datatype, string}
+]}.
+
+%% @doc Set the AWS Secret Key.
+%% See http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html.
+{mapping, "vernemq_kinesis.aws_secret_key", "vernemq_kinesis.aws_secret_key", [
+{default, ""},
+{datatype, string}
+]}.
+
+%% @doc Set the AWS Region to use for sending records to Kinesis.
+{mapping, "vernemq_kinesis.region", "vernemq_kinesis.region", [
+{default, "us-east-1"},
+{datatype, string}
+]}.
+
+%% @doc set the Kinesis stream name to put records to.
+{mapping, "vernemq_kinesis.stream", "vernemq_kinesis.stream", [
+{default, ""},
+{datatype, string}
+]}.
+
+%% @doc Set the topics that are allowed to publish to Kinesis. Can use "#" for all
+%% the topics or wilcards like <<"devices/#">>.
+{mapping, "vernemq_kinesis.allowed_topics", "vernemq_kinesis.allowed_topics", [
+{default, "#"},
+{datatype, string}
+]}.
+
+%% @doc Set the number of records to batch before flushing the queue. Defaults to 500.
+{mapping, "vernemq_kinesis.batch_size", "vernemq_kinesis.batch_size", [
+{default, 500},
+{datatype, integer}
+]}.
+
+%% @doc Set the maximum of milliseconds to wait before flushing the queue.
+%% Defaults to 20000(20 seconds).
+{mapping, "vernemq_kinesis.batch_time", "vernemq_kinesis.batch_time", [
+{default, 20000},
+{datatype, integer}
+]}.
