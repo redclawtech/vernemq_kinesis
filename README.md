@@ -1,14 +1,13 @@
-VerneMQ Kinesis Plugin
-======================
+# VerneMQ Kinesis Plugin
 
 This is a [VerneMQ](https://vernemq.com/) plugin that aggregates and sends MQTT messages to
 [AWS Kinesis](https://aws.amazon.com/kinesis/).
 
-### Prerequisites
+## Prerequisites
 
 * A recent version of Erlang OTP(19 recommended).
 
-### How to compile it?
+## How to compile it?
 
 This project uses [Rebar3](https://www.rebar3.org) as a build tool and can be compiled running:
 
@@ -16,15 +15,15 @@ This project uses [Rebar3](https://www.rebar3.org) as a build tool and can be co
 $ rebar3 compile
 ```
 
-### How to enable the plugin on VerneMQ?
+## How to enable the plugin on VerneMQ
 
-1. Manually enable:
+### Manually enable
 
-```bash
-$ vmq-admin plugin enable --name=vernemq_kinesis --path=<PathToYourPlugin>/vernemq_kinesis/_build/default/lib/vernemq_kinesis
+```console
+vmq-admin plugin enable --name=vernemq_kinesis --path=<PathToYourPlugin>/vernemq_kinesis/_build/default/lib/vernemq_kinesis
 ```
 
-2. Permanently enable (On VerneMQ start):
+### Permanently enable (On VerneMQ start)
 
 Add the following to the `vernemq.conf` file.
 
@@ -33,9 +32,9 @@ plugins.vernemq_kinesis = on
 plugins.vernemq_kinesis.path = <PathToYourPlugin>/vernemq_kinesis/_build/default/lib/vernemq_kinesis
 ```
 
-### Configuration
+## Configuration
 
-- The following settings are available for this plugin:
+The following settings are available for this plugin:
 
     - **vernemq_kinesis.aws_key**: The AWS Key.
         See http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html.
